@@ -5,6 +5,7 @@
 
 # DESCRIPTION:
 # Star script to open a desired (one) file with lite
+# ( https://github.com/rxi/lite )
 # Save this anywhere you like, and make a link to your PATH
 # In my case: sudo link start-lite.sh /usr/local/bin/lite
 
