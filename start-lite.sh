@@ -57,7 +57,7 @@ cat $PATHtoLITE/data/core/EXEDIR $PATHtoLITE/data/core/init.lua.fake > $PATHtoLI
 # Go to line 85 and cut the whole line that says "local project_dir = EXEDIR"
 # Save the file as init.lua.fake
 
-# This script will combine the two files (EXEDIT + init.lua.fake) into 1, so that
+# This script will combine the two files (EXEDIR + init.lua.fake) into 1, so that
 # the config file uses current PWD as the project directory.
 
 # Current bugs: Giving a full path to a file that you want to open
