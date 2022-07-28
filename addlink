@@ -1,0 +1,27 @@
+#!/bin/sh
+# Simple shell script to save a link to a list in a text file.
+# link or anything else.
+# Allow execution -> Add to your $PATH -> Use and enjoy
+# Initial idea: 2022-01-09
+# Last update: 2022-01-10
+# KuchiKuu
+
+
+
+if [ ! -d $HOME/.links_backup ]; then
+	echo "$HOME/.links_backup directory does not exist. Creating now..."
+	mkdir $HOME/.links_backup
+fi
+if [ ! -f $HOME/links ]; then
+	echo "$HOME/links does not exist. Creating now..."
+	touch $HOME/links
+fi
+if [ $# != 1 ]; then
+	#echo "Usage:"
+	#echo "${0##*/} link"
+	cat $HOME/links
+	exit 1
+fi
+
+cp $HOME/links $HOME/.links_backup/links-$(date +%Y-%m-%d-%T)
+echo "$1" >> $HOME/links
